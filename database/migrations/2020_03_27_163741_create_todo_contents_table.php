@@ -13,11 +13,11 @@ class CreateTodoContentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('todo_contents', function (Blueprint $table) {
+        Schema::create('todo_content', function (Blueprint $table) {
             $table->id();
-            $table->user_id('BIGINT');
-            $table->priority('TINYINT');
-            $table->memo('TEXT');
+//            $table->user_id('BIGINT');
+//            $table->priority('TINYINT')->default(1);
+//            $table->memo('TEXT');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTodoContentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('todo_contents');
+        Schema::dropIfExists('todo_content');
     }
 }
