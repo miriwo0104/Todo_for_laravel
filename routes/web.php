@@ -17,8 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'TopController@index');
 
 //login画面系
-Route::get('/auth/register', 'Auth/RegisterController@showRegistrationForm');
-Route::post('/auth/register', 'Auth/RegisterController@register');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user_home', 'UserHomeController@user_home');
