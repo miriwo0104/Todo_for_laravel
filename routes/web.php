@@ -25,3 +25,4 @@ Route::get('/user_home', 'UserHomeController@user_home');
 
 //post画面系
 Route::get('/add_todo', 'PostController@add_todo');
+Route::post('/add_todo', 'PostController@regist_todo');
