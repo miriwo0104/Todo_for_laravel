@@ -15,9 +15,10 @@ class CreateTodoContentsTable extends Migration
     {
         Schema::create('todo_content', function (Blueprint $table) {
             $table->id();
-//            $table->user_id('BIGINT');
-//            $table->priority('TINYINT')->default(1);
-//            $table->memo('TEXT');
+            $table->integer('user_id');
+            $table->string('content');
+            $table->string('memo');
+            $table->integer('priority')->default(1);
             $table->timestamps();
         });
     }
