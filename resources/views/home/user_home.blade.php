@@ -21,6 +21,7 @@
                 <td>{{$item->content}}</td>
                 <td>{{$item->memo}}</td>
                 <td><a href="{{$item->id}}/todo_setting">編集</a></td>
+                <td><a href="{{$item->id}}/todo_setting">削除</a></td>
             </tr>
 
         @endforeach

@@ -23,7 +23,6 @@ class PostController extends Controller
         $new_todo->user_id = Auth::id();
         $new_todo->content = $todo_info['todo'];
         $new_todo->priority = $todo_info['priority'];
-//        $new_todo->priority = 1;
         $new_todo->memo = $todo_info['memo'];
         $new_todo->save();
         return redirect('/user_home');

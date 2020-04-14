@@ -22,20 +22,21 @@ class UserHomeController extends Controller
         return view('home.todo_setting', ['item' => $item]);
     }
 
+    //test
     public function update(Request $request, $todo_id) {
-//        $todo_info = [
-//            'id' => $request->id,
-//            'todo' => $request->todo,
-//            'priority' => $request->priority,
-//            'memo' => $request->memo,
-//        ];
-//
-//        $todo = Todo::find($todo_id);
-//
-//        $todo->content = 'test111';
-//        $todo->priority = 0;
-//        $todo->memo = 'test111';
-//        $todo->save();
+        $todo_info = [
+            'id' => $request->id,
+            'todo' => $request->todo,
+            'priority' => $request->priority,
+            'memo' => $request->memo,
+        ];
+        
+        $todo = Todo::find($todo_info['id']);
+
+        $todo->content = $todo_info['todo'];
+        $todo->priority = $todo_info['priority'];
+        $todo->memo = $todo_info['memo'];
+        $todo->save();
         return redirect('/user_home');
     }
 }
