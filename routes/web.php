@@ -28,3 +28,6 @@ Route::get('/add_todo', 'PostController@add_todo');
 Route::post('/add_todo', 'PostController@regist_todo');
 
 Route::get('/elo_test', 'ContentController@index');
+
+Route::get('/{todo_id}/todo_setting', 'UserHomeController@todo_setting');
+Route::post('/{todo_id}/todo_setting', 'UserHomeController@update');
