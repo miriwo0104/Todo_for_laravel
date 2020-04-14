@@ -17,7 +17,25 @@ class UserHomeController extends Controller
     }
 
     public function todo_setting($todo_id) {
-        $item = Todo::whereId($todo_id)->get();
+        $items = Todo::whereId($todo_id)->get();
+        $item = $items[0];
         return view('home.todo_setting', ['item' => $item]);
+    }
+
+    public function update(Request $request, $todo_id) {
+//        $todo_info = [
+//            'id' => $request->id,
+//            'todo' => $request->todo,
+//            'priority' => $request->priority,
+//            'memo' => $request->memo,
+//        ];
+//
+//        $todo = Todo::find($todo_id);
+//
+//        $todo->content = 'test111';
+//        $todo->priority = 0;
+//        $todo->memo = 'test111';
+//        $todo->save();
+        return redirect('/user_home');
     }
 }
